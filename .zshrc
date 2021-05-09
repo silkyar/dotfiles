@@ -197,6 +197,14 @@ unset __conda_setup
 if [ -f ~/.fb.zshrc ]; then
 	source ~/.fb.zshrc
 fi
+# More FB-specific
+alias curl='curl $(fwdproxy-config curl)'
+alias rsync='rsync $(fwdproxy-config rsync)'
+alias ssh='ssh $(fwdproxy-config ssh)'
+alias wget='wget $(fwdproxy-config wget)'
+# alias hg='hg $(fwdproxy-config hg)'
+# alias git='git $(fwdproxy-config git)'
+# alias java='java $(fwdproxy-config java)'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
