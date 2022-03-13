@@ -61,6 +61,7 @@ done
 # Add gitconfig for git-delta to global gitconfig
 git config --global include.path ~/.delta.gitconfig
 
+<<com
 # FB dev
 # Also symlink to ~/.ondemand/homedir for ondemand dot-file sync
 ONDEMAND_HOMEDIR=~/.ondemand/homedir
@@ -82,5 +83,6 @@ mkdir -p ${ONDEMAND_HOMEDIR}/bin
 FD_LINUX_BIN="https://github.com/sharkdp/fd/releases/download/v8.3.0/fd-v8.3.0-x86_64-unknown-linux-gnu.tar.gz"
 wget -qO- ${FD_LINUX_BIN} | tar xz - -C ${ONDEMAND_HOMEDIR}/bin/
 cp ${ONDEMAND_HOMEDIR}/bin/fd-*/fd ${ONDEMAND_HOMEDIR}/bin/
+com
 
 echo "Done setting up dotfiles!"

@@ -286,7 +286,7 @@ augroup END
 " Keymaps to open files in splits from fzf window
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
+  \ 'ctrl-h': 'split',
   \ 'ctrl-v': 'vsplit' }
 " <leader>f to search filenames (using fd if available)
 nnoremap <leader>f :Files<CR>
@@ -389,9 +389,9 @@ augroup lint_and_format
   " autocmd FileType c,cpp,cc,cuda,java,objc,proto ClangFormatAutoEnable
 
   " Strip any training whitespace on buffer write
-  autocmd FileType c,cabal,cpp,cuda,python,haskell,erlang,javascript,php,ruby,readme,tex,text,thrift
-    \ autocmd BufWritePre <buffer>
-    \ :call <SID>StripTrailingWhitespaces()
+  " autocmd FileType c,cabal,cpp,cuda,python,haskell,erlang,javascript,php,ruby,readme,tex,text,thrift
+  "   \ autocmd BufWritePre <buffer>
+  "   \ :call <SID>StripTrailingWhitespaces()
 
   " Highlight past 79 characters
   " highlight CharLimit ctermbg=black ctermfg=white guibg=#592929
