@@ -22,7 +22,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'fs111/pydoc.vim'  " Python documentation (Shift+K for word under cursor)
 Plug 'godlygeek/tabular'  " Dependency for vim-markdown
-Plug 'plasticboy/vim-markdown'  " Markdown folds
+"Plug 'plasticboy/vim-markdown'  " Markdown folds
 Plug 'dkarter/bullets.vim'  " Auto lists and checkboxes/todo-lists
 call plug#end()
 
@@ -221,22 +221,22 @@ nnoremap <leader>r :silent! Tabdo e<CR>
 
 " Vim folds
 " Default fold commands start with z. Remap to f to avoid Emacs pinky.
-map fo zo      " Open fold under cursor
-map fO zO      " Open fold under cursor (recursive)
-map fc zc      " Close fold under cursor
-map fC zC      " Close fold under cursor (recursive)
-map ft za      " Toggle fold under cursor
-map fT zA      " Toggle fold under cursor (recursive)
-map fl zm      " Show less - fold one level more
-map fL zM      " Fold all
-map fm zr      " Show more - unfold one more level
-map fM zR      " Show/unfold all
-map ff zM zv   " Focus - fold all but the one under cursor
-map fgg [z     " Move to the start of the current fold
-map fG ]z      " Move to the end of the current fold
-map fj zj      " Move to the start of the next fold
-map fk zk      " Move to the end of the previous fold
-
+"map fo zo      " Open fold under cursor
+"map fO zO      " Open fold under cursor (recursive)
+"map fc zc      " Close fold under cursor
+"map fC zC      " Close fold under cursor (recursive)
+"map ft za      " Toggle fold under cursor
+"map fT zA      " Toggle fold under cursor (recursive)
+"map fl zm      " Show less - fold one level more
+"map fL zM      " Fold all
+"map fm zr      " Show more - unfold one more level
+"map fM zR      " Show/unfold all
+"map ff zM zv   " Focus - fold all but the one under cursor
+"map fgg [z     " Move to the start of the current fold
+"map fG ]z      " Move to the end of the current fold
+"map fj zj      " Move to the start of the next fold
+"map fk zk      " Move to the end of the previous fold
+"
 
 " Avoid jumping to the next match when using * to highlight word under the cursor.
 " https://stackoverflow.com/questions/4256697/vim-search-and-highlight-but-do-not-jump
@@ -327,31 +327,31 @@ map <leader>hb :HGblame<CR>
 
 
 " vim-markdown - https://github.com/plasticboy/vim-markdown
-let g:vim_markdown_new_list_item_indent = 0  " Number of indent spaces on new list item
-let g:vim_markdown_toc_autofit = 1  " Autofit Table of Contents (ToC) window
-let g:vim_markdown_math = 1  " LaTeX extension on
-let g:vim_markdown_conceal_code_blocks = 0  " Don't conceal code-blocks
-augroup vim_markdown_folds
-  autocmd!
-
-  " Keymaps
-  autocmd FileType markdown map fj <Plug>Markdown_MoveToNextHeader
-  autocmd FileType markdown map fk <Plug>Markdown_MoveToPreviousHeader
-  autocmd FileType markdown map fJ <Plug>Markdown_MoveToNextSiblingHeader
-  autocmd FileType markdown map fK <Plug>Markdown_MoveToPreviousSiblingHeader
-  autocmd FileType markdown map fu <Plug>Markdown_MoveToParentHeader
-  autocmd FileType markdown map fi :Toc<CR>  " Show Table of Contents
-  autocmd FileType markdown map f> :HeaderIncrease<CR>  " Increase level of all or selected headers
-  autocmd FileType markdown map f< :HeaderDecrease<CR>  " Decrease level of all or selected headers
-
-  " Enable conceal for markdown files
-  autocmd Filetype markdown setlocal conceallevel=2
-  " Disable wrap to avoid showing empty lines when wrapped text is concealed
-  " (such as long hyperlinks)
-  autocmd FileType markdown setlocal nowrap
-augroup NED
-
-
+" let g:vim_markdown_new_list_item_indent = 0  " Number of indent spaces on new list item
+" let g:vim_markdown_toc_autofit = 1  " Autofit Table of Contents (ToC) window
+" let g:vim_markdown_math = 1  " LaTeX extension on
+" let g:vim_markdown_conceal_code_blocks = 0  " Don't conceal code-blocks
+" augroup vim_markdown_folds
+"  autocmd!
+"
+"  " Keymaps
+"  autocmd FileType markdown map fj <Plug>Markdown_MoveToNextHeader
+"  autocmd FileType markdown map fk <Plug>Markdown_MoveToPreviousHeader
+"  autocmd FileType markdown map fJ <Plug>Markdown_MoveToNextSiblingHeader
+"  autocmd FileType markdown map fK <Plug>Markdown_MoveToPreviousSiblingHeader
+"  autocmd FileType markdown map fu <Plug>Markdown_MoveToParentHeader
+"  autocmd FileType markdown map fi :Toc<CR>  " Show Table of Contents
+"  autocmd FileType markdown map f> :HeaderIncrease<CR>  " Increase level of all or selected headers
+"  autocmd FileType markdown map f< :HeaderDecrease<CR>  " Decrease level of all or selected headers
+"
+"  " Enable conceal for markdown files
+"  autocmd Filetype markdown setlocal conceallevel=2
+"  " Disable wrap to avoid showing empty lines when wrapped text is concealed
+"  " (such as long hyperlinks)
+"  autocmd FileType markdown setlocal nowrap
+"augroup NED
+"
+"
 " bullets.vim - https://github.com/dkarter/bullets.vim
 let g:bullets_nested_checkboxes = 0  " Decouple parent and child checkbox toggling
 let g:bullets_checkbox_markers = ' ✗'

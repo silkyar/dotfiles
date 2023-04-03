@@ -16,10 +16,14 @@
 # Keep oodles of command history (see https://fburl.com/bashhistory).
 HISTFILESIZE=-1
 HISTSIZE=1000000
-shopt -s histappend
+#shopt -s histappend
 
 # We don't actually need this in bashrc, but `brew install fzf` in setup.sh adds this here.
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Switch to zsh finally
 zsh; exit "$?"
